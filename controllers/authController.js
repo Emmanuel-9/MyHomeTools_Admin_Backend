@@ -6,7 +6,7 @@ exports.login = async (req, res) => {
         const { email, password } = req.body
 
 		if (!(email && password)) {
-			res.status(400).send("All inputs required")
+			res.status(400).send("All inputs are required to proceed")
 		}
 
         const user = await UserModel.findOne({ email })
