@@ -20,7 +20,7 @@ describe("/GET product", () => {
   it("it should GET all the product", (done) => {
     chai
       .request(server)
-      .get("/product")
+      .get("/product/all")
       .end((err, res) => {
         res.should.have.status(200)
         res.body.should.be.a("array")
