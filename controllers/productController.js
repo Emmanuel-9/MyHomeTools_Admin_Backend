@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 
@@ -6,7 +7,7 @@ exports.login = async (req, res) => {
         const { email, password } = req.body
 
 		if (!(email && password)) {
-			res.status(400).send("All inputs required")
+			res.status(400).send("All inputs are required to proceed")
 		}
 
         const user = await UserModel.findOne({ email })
@@ -30,4 +31,21 @@ exports.login = async (req, res) => {
     }catch(err) {
         res.status(500).json(err)
     }
+=======
+const Product = require("../models/Product")
+
+exports.createProduct = async (req, res) => {
+  const newProduct = new Product(req.body)
+
+  // if(req.body){
+  //   res.send('hello')
+  // }
+
+  try {
+    const savedProduct = await newProduct.save()
+    res.status(200).json(savedProduct)
+  } catch (err) {
+    res.status(500).json(error)
+  }
+>>>>>>> 1966cf1057c5a6cefb5c198745aa1e7058fb90d6
 }
