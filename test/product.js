@@ -1,11 +1,11 @@
-let mongoose = require("mongoose")
+// let mongoose = require("mongoose")
 
-let Product = require("../models/Product")
+// let Product = require("../models/Product")
 
 let chai = require("chai")
 let chaiHttp = require("chai-http")
 let server = require("../app")
-const { createProduct } = require("../controllers/productController")
+// const { createProduct } = require("../controllers/productController")
 let should = chai.should()
 chai.use(chaiHttp)
 
@@ -22,7 +22,9 @@ describe("/GET all products", () => {
     chai
       .request(server)
       .get("/product/")
-      .end((err, res) => {
+      .end( ( err, res ) => {
+        
+        console.log(res.body)
         res.should.have.status(200)
         res.body.should.be.a("array")
         // res.body.length.should.be.eql(0)
@@ -31,15 +33,22 @@ describe("/GET all products", () => {
   })
 })
 
-// describe("/GET product by id", () => {
-//   it("should GET all the product by id", (done) => {
-//     chai
-//       .request(server)
-//       .get("/product/:id")
-//       .end( ( err, res ) => {
-//         res.should.have.status( 200 )
-//         // res.body.should.be.a( "object" )
-//         done()
-//       })
-//   })
-// })
+describe("/GET product by id", () => {
+  it("should GET all the product by id", (done) => {
+    chai
+      .request(server)
+      .get("/product/")
+      .query({ id: "1" })
+      .end( ( err, res ) => {
+        console.log(res.body)
+        res.should.have.status(200)
+        res.body.should.be.a("array")
+        done()
+      })
+  })
+})
+
+
+after( () => {
+  
+})
