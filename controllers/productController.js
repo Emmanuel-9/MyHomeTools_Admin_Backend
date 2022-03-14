@@ -16,7 +16,7 @@ exports.createProduct = async (req, res) => {
 }
 
 exports.findAll = (req,res) => {
-  product.find()
+  Product.find()
   
   .then(products => {
       res.status(200).json(products);
