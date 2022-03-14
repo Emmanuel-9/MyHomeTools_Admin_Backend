@@ -17,7 +17,7 @@ chai.use(chaiHttp)
 //     })
 // })
 
-describe("/GET product", () => {
+describe("/GET all products", () => {
   it("it should GET all the product", (done) => {
     chai
       .request(server)
@@ -25,8 +25,21 @@ describe("/GET product", () => {
       .end((err, res) => {
         res.should.have.status(200)
         res.body.should.be.a("array")
-        res.body.length.should.be.eql(0)
+        // res.body.length.should.be.eql(0)
         done()
       })
   })
 })
+
+// describe("/GET product by id", () => {
+//   it("should GET all the product by id", (done) => {
+//     chai
+//       .request(server)
+//       .get("/product/:id")
+//       .end( ( err, res ) => {
+//         res.should.have.status( 200 )
+//         // res.body.should.be.a( "object" )
+//         done()
+//       })
+//   })
+// })
