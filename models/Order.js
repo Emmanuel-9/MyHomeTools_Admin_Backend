@@ -30,6 +30,19 @@ const orderSchema = new mongoose.Schema(
         },
       },
     ],
+    delivery_address: [
+      {
+        name: String,
+        delivery_phone_number: String,
+        city: String,
+        more_info: String,
+      },
+    ],
+    payment_details: [
+      {
+        payment_phone_number: String,
+      },
+    ],
   },
 
   { timestamps: true }
