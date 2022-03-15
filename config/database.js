@@ -9,10 +9,10 @@ exports.connect = () => {
     })
 
     .then(() => {
-        console.log("connected to database successfully")
+        console.log("connected to the main database successfully")
     })
     .catch((error) => {
-        console.log("database connection failed")
+        console.log("database connection to the main failed")
         console.log(error)
         process.exit(1)
     })
