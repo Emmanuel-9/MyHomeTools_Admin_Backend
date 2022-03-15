@@ -9,6 +9,7 @@ const cors = require("cors")
 app.use( cors())
 app.use(express.json())
 
-app.use("/product", require('./routes/productRoute'))
+app.use( "/product", require( './routes/productRoute' ) )
+app.use('/order', require( './routes/orderRoute' ) )
 
 module.exports = app
