@@ -43,6 +43,7 @@ const orderSchema = new mongoose.Schema(
         payment_phone_number: String,
       },
     ],
+    total:String
   },
 
   { timestamps: true }
