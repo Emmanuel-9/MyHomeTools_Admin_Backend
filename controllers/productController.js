@@ -2,16 +2,17 @@ const Product = require("../models/Product")
 
 exports.createProduct = async (req, res) => {
   const newProduct = new Product(req.body)
-
+console.log("product from the frontend is: ", newProduct)
   // if(req.body){
   //   res.send('hello')
   // }
 
   try {
     const savedProduct = await newProduct.save()
-    res.status(200).json(savedProduct)
+    res.status( 200 ).send( savedProduct )
+    console.log("saved product is: ",savedProduct)
   } catch (err) {
-    res.status(500).json(error)
+    res.status(500).json(err)
   }
 }
 
