@@ -1,0 +1,64 @@
+[
+    {
+        "_id": {
+            "$oid": "62348aaea6eb6249777ec0d2"
+        },
+        "product_name": "Toaster",
+        "description": "Top Quality ",
+        "category": "kitchen",
+        "price": {
+            "$numberInt": "3000"
+        },
+        "quantity": {
+            "$numberInt": "40"
+        },
+        "image": "http://res.cloudinary.com/myhometools/image/upload/v1647610382/efegjnxzpqalyavf0otz.png",
+        "discount": {
+            "$numberInt": "10"
+        },
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1647610542043"
+            }
+        },
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1647610542043"
+            }
+        },
+        "__v": {
+            "$numberInt": "0"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "623489ffa6eb6249777ec0cc"
+        },
+        "product_name": "Toaster",
+        "description": "Top Quality ",
+        "category": "kitchen",
+        "price": {
+            "$numberInt": "3000"
+        },
+        "quantity": {
+            "$numberInt": "40"
+        },
+        "image": "http://res.cloudinary.com/myhometools/image/upload/v1647610293/atzhpivgffccwgclddyf.png",
+        "discount": {
+            "$numberInt": "10"
+        },
+        "createdAt": {
+            "$date": {
+                "$numberLong": "1647610367874"
+            }
+        },
+        "updatedAt": {
+            "$date": {
+                "$numberLong": "1647610367874"
+            }
+        },
+        "__v": {
+            "$numberInt": "0"
+        }
+    }
+]
